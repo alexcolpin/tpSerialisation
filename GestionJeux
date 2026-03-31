@@ -1,0 +1,36 @@
+namespace tpSerialisation;
+using System;
+using System.Collections.Generic;
+
+class GestionJeux
+{
+    private List<JeuVideo> liste = new List<JeuVideo>();
+
+    public void AjouterJeu(JeuVideo jeu)
+    {
+        liste.Add(jeu);
+    }
+
+    public void SupprimerJeu(string titre)
+    {
+        liste.RemoveAll(j => j.Titre == titre);
+    }
+
+    public void Afficher()
+    {
+        foreach (var jeu in liste)
+        {
+            Console.WriteLine(jeu.Titre + " - " + jeu.Studio + " - " + jeu.Prix);
+        }
+    }
+
+    public List<JeuVideo> GetListe()
+    {
+        return liste;
+    }
+
+    public void SetListe(List<JeuVideo> l)
+    {
+        liste = l;
+    }
+}

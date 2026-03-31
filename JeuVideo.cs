@@ -1,3 +1,4 @@
+namespace tpSerialisation;
 class JeuVideo
 {
     private string titre;
