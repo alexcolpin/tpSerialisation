@@ -15,7 +15,8 @@ public class Program
         GestionJeux g2 = new GestionJeux();
         g2.ChargerCSV("jeux.csv");
         g2.Afficher();
-        //gestion.SauvegarderXML("jeux.xml"); 
+        gestion.SauvegarderXML("jeux.xml"); 
+        gestion.SauvegarderJSON("jeux.json");
     }
 }
 

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Xml.Serialization;
+using System.Text.Json;
 
 public class GestionJeux
 {
@@ -64,6 +65,13 @@ public class GestionJeux
         {
             xs.Serialize(fs, liste);
         }
+    }
+    
+
+    public void SauvegarderJSON(string fichier)
+    {
+        string json = JsonSerializer.Serialize(liste);
+        File.WriteAllText(fichier, json);
     }
 }
 
