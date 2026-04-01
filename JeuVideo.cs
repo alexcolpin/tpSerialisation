@@ -1,5 +1,5 @@
 namespace tpSerialisation;
-class JeuVideo
+public class JeuVideo
 {
     private string titre;
     private string studio;
