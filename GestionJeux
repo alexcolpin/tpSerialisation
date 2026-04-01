@@ -1,6 +1,7 @@
 namespace tpSerialisation;
 using System;
 using System.Collections.Generic;
+using System.IO;
 
 class GestionJeux
 {
@@ -33,4 +34,17 @@ class GestionJeux
     {
         liste = l;
     }
+    public void SauvegarderCSV(string fichier)
+    {
+        using (StreamWriter sw = new StreamWriter(fichier))
+        {
+            foreach (var jeu in liste)
+            {
+                sw.WriteLine(jeu.Titre + ";" + jeu.Studio + ";" + jeu.Prix);
+            }
+        }
+    }
 }
+
+
+

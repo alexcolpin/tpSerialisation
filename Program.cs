@@ -11,6 +11,7 @@ class Program
         gestion.AjouterJeu(new JeuVideo("The Witcher 3", "CD Projekt", 39.99));
 
         gestion.Afficher();
+        gestion.SauvegarderCSV("jeux.csv");
     }
 }
 
@@ -22,6 +23,11 @@ internal class GestionJeux
     }
 
     internal void AjouterJeu(JeuVideo jeuVideo)
+    {
+        throw new NotImplementedException();
+    }
+
+    internal void SauvegarderCSV(string v)
     {
         throw new NotImplementedException();
     }
