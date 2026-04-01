@@ -12,6 +12,9 @@ class Program
 
         gestion.Afficher();
         gestion.SauvegarderCSV("jeux.csv");
+        GestionJeux g2 = new GestionJeux();
+        g2.ChargerCSV("jeux.csv");
+        g2.Afficher();
     }
 }
 
@@ -23,6 +26,11 @@ internal class GestionJeux
     }
 
     internal void AjouterJeu(JeuVideo jeuVideo)
+    {
+        throw new NotImplementedException();
+    }
+
+    internal void ChargerCSV(string v)
     {
         throw new NotImplementedException();
     }

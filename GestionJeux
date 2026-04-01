@@ -44,6 +44,19 @@ class GestionJeux
             }
         }
     }
+    public void ChargerCSV(string fichier)
+{
+    if (File.Exists(fichier))
+    {
+        liste.Clear();
+
+        foreach (var ligne in File.ReadAllLines(fichier))
+        {
+            var parties = ligne.Split(';');
+            liste.Add(new JeuVideo(parties[0], parties[1], double.Parse(parties[2])));
+        }
+    }
+}
 }
 
 
